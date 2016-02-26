@@ -1,0 +1,12 @@
+To do before coding:
+
+  ensure rbenv -local 2.2.0
+  comment out coffeescript
+Authentication/Authorization
+  gem 'sorcery'
+Development/Test
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'awesome_print'
+Database
+  replace sqlite3 with gem 'pg'
