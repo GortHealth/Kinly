@@ -3,8 +3,8 @@
 <h1><%= @album.name %></h1>
 
 <% @photos.each do |photo| %>
-  <div>
-    <a href="<%= photo_path(photo) %>"><%= image_tag photo.thumbnail_url, alt: photo.name %></a>
+  <div class="album-photo-container">
+    <a href="<%= photo_path(photo) %>" class="album-photo-link"><%= image_tag photo.thumbnail_url, alt: photo.name %></a>
     <p>
       <%= photo.name %>
     </p>
