@@ -17,12 +17,20 @@ class Channel < ActiveRecord::Base
     elsif self.active == true && self.number == -1
       max = Channel.maximum("number") + 1
       counter = 1
-      max.times do
-        if Channel.select("number") != counter
+      Channel.select.("number").each do |num|
+        if num != counter
           self.number = counter
           return
+        else
+          counter += 1
         end
-        counter += 1
+      # max.times do
+      #   byebug
+      #   if Channel.select("number") != counter
+      #     self.number = counter
+      #     return
+      #   end
+      #   counter += 1
       end
     end
   end
