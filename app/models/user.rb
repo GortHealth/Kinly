@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :targets
+  has_many :albums
+  has_many :photos
+
   authenticates_with_sorcery!
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes["password"] }
