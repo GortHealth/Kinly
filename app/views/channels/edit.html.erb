@@ -13,3 +13,9 @@
   <%= f.submit %>
 
 <% end %>
+
+<% @photos.each do |photo| %>
+  <p>
+    <%= (ChannelsPhoto.find_by photo_id: photo.id).order %> <%= image_tag photo.thumbnail_url %>
+  </p>
+<% end %>
