@@ -1,9 +1,9 @@
-<h1>Channels Listing</h1>
+<h1>My Channels</h1>
 
-<% @active_channels.each do |channel| %>
-  <div class="col-xs-12 channel-container">
+<% @channels.each do |channel| %>
+  <div class="col-xs-12 channel-container <%= "inactive" if !channel.active %>">
+
     <span class="pull-left channel-number"><%= channel.number %></span>
-
     <div class="channel-info">
       <h4 class="pull-left"><%= channel.name %></h4>
 
@@ -18,33 +18,6 @@
 
 <% end %>
 
-<% @inactive_channels.each do |channel| %>
-<div class="col-xs-12 channel-container">
-  <span class="pull-left channel-number"><%= channel.number %></span>
-
-  <div class="channel-info">
-    <h4 class="pull-left"><%= channel.name %></h4>
-
-    <div class="pull-right">
-      <a href="#" class="btn btn-primary">Add Photo</a>
-      <%= link_to "Preview", channel_path(channel), class: "btn btn-primary" %>
-      <%= link_to "Edit", edit_channel_path(channel), class: "btn btn-primary" %>
-    </div>
-  </div>
-
-</div>
-<!--
-<ul>
-  <li><%= channel.number %></li>
-  <li><%= channel.name %></li>
-  <li><%= channel.active %></li>
-  <li><%= link_to "Edit Channel", edit_channel_path(channel) %></li>
-  <li><%= link_to "Preview Channel", channel_path(channel) %></li>
-</ul> -->
-<!-- There could be another link here for change active status so it is obvious to user how to deplay channel (now it is in edit view) -->
-<!-- This is a UX issue and should be discussed -->
-
-<% end %>
 
 <%= form_for @new_channel do |f| %>
 

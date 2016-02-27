@@ -54,3 +54,22 @@
    padding: 10px;
    border-style: 1px, solid, black;
  }
+
+ .btn-primary {
+   background: #13938e;
+   border: none;
+   margin: 2px;
+
+   &:focus {
+     background-color: #94d3c2;
+   }
+
+   &:hover{
+     background-color: #94d3c2;
+   }
+
+   &:active,
+   &:hover:active{
+     background-color: #b8e1db;
+   }
+ }

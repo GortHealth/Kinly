@@ -4,3 +4,41 @@
 .slideshow-container {
   background: black;
 }
+
+.channel-container {
+
+  .channel-info {
+    padding-top: 5px;
+
+    h4 {
+      padding: 0 10px;
+    }
+
+    .btn-group {
+      margin-top: 10px;
+    }
+  }
+
+  .channel-number {
+    font-size: 30px;
+    font-weight: bold;
+    // border: 2px solid #94d3c2;
+    border-radius: 50%;
+    width: 1.5em;
+    text-align: center;
+    margin: 8px;
+    background: #94d3c2;
+  }
+
+  &.inactive  {
+    .channel-info {
+      color: gray;
+    }
+
+    .channel-number {
+      background: #8a8c8c;
+    }
+
+  }
+
+}
