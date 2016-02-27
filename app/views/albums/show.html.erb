@@ -1,0 +1,12 @@
+<%= link_to "<< Back to Library", albums_path %>
+
+<h1><%= @album.name %></h1>
+
+<% @photos.each do |photo| %>
+  <div>
+    <a href="<%= photo_path(photo) %>"><%= image_tag photo.thumbnail_url, alt: photo.name %></a>
+    <p>
+      <%= photo.name %>
+    </p>
+  </div>
+<% end %>
