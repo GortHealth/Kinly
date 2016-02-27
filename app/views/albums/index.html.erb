@@ -1,0 +1,18 @@
+<h1>Library</h1>
+
+<% @albums.each do |album| %>
+
+  <p>
+    <%= link_to album.name, album_path(album) %>
+  </p>
+
+<% end %>
+
+<%= form_for @new_album do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+
+<% end %>
