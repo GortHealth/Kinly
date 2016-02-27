@@ -16,25 +16,34 @@
   <header class="header-main">
     <nav class="navbar navbar-default">
       <div class="container">
-      <div class="container-fluid">
+        <div class="header-inner">
 
-        <a class="logo" href="/"><%= image_tag '/assets/logo_name_kinly.png' %></a>
+          <a class="logo" href="/"><%= image_tag '/assets/logo_name_kinly.png' %></a>
 
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <% if current_user %>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <% if current_user %>
               <li><%=link_to "Channels", channels_path %></li>
               <li><%=link_to "Library", albums_path %></li>
               <li><%=link_to "Account", user_path(current_user) %></li>
-              <li><%= link_to "Logout", :logout, method: :post %></li>
-            <% else %>
-              <li><%= link_to "Register", new_user_path %></li>
-              <li><%= link_to "Login", :login %></li>
-            <% end %>
+              <% end %>
+            </ul>
+          </div><!-- nav-links-container -->
 
-          </ul>
-        </div><!-- nav-links-container -->
-      </div><!-- /.container-fluid -->
+          <div class="login-container">
+            <ul>
+              <% if current_user %>
+              <li><%= link_to "Logout", :logout, method: :post %></li>
+              <% else %>
+              <li><%= link_to "Login", :login %></li>
+              <li><%= link_to "Register", new_user_path %></li>
+              <% end %>
+            </ul>
+          </div>
+
+        </div>
+
+
     </div>
     </nav>
   </header>

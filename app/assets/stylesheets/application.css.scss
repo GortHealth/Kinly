@@ -18,12 +18,13 @@
    outline: none !important;
  }
 
+
  html, body {
    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
    font-size: 20px;
    line-height: 1.35;
-   color: #2b2b2b;
-   background-color: #d8d9d8;
+   color: white;
+   background-color: #2b2b2b;
  }
 
  h1{
@@ -39,17 +40,28 @@
   .navbar-default {
     height: 52px;
     background-color: #13938e;
+    border: none;
+    border-radius: 0px !important;
   }
 
  .logo {
-   height: 70px;
+   img {
+     width: 150px;
+     margin-top: 2px;
+   }
    position: absolute;
    top: 5;
    left: 30;
  }
 
+
+.header-inner {
+  width: 100%;
+}
+
 .nav-links-container {
   margin: 0 auto;
+  width: 422px;
 }
 
 .nav-links {
@@ -74,6 +86,39 @@
       }
     }
 
+  }
+}
+
+.login-container {
+  float: right;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      margin-left: 15px;
+      float: right;
+      height: 52px;
+      background-color: #0a5450;
+      padding-top: 0;
+
+      &:hover {
+        background-color: #b8e1db;
+        a {
+          color: #0a5450;
+          text-decoration: none;
+        }
+      }
+
+      a {
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 400;
+        display: block;
+        height: 52px;
+        line-height: 2.5rem;
+      }
+    }
   }
 }
 
