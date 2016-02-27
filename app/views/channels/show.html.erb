@@ -1,5 +1,5 @@
-<%= javascript_include_tag 'application' %>
 <%= stylesheet_link_tag    'application' %>
+<%= javascript_include_tag 'application' %>
 <div class="slideshow-container">
   <% @channel.photos.each do |photo| %>
     <%= image_tag photo.url %>

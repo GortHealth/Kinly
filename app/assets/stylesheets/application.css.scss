@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+
+ *:focus {
+   outline: none !important;
+ }
+
+ html, body {
+   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+   font-size: 20px;
+   line-height: 1.35;
+   color: #2b2b2b;
+   background-color: #d8d9d8;
+ }
+
+ h1{
+   font-size: 50px;
+   text-align: center;
+   margin: 20px;
+ }
+
+  .home_text{
+    margin: 20px;
+  }
+
+ .navbar-brand{
+   height: 70px;
+ }
+
+ a.navbar-brand {
+   padding: 0px;
+   color: #2b2b2b;
+
+   img{
+     width: 70px;
+     padding: 5px;
+   }
+ }
+
+ li{
+   padding: 10px;
+   border-style: 1px, solid, black;
+ }

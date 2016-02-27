@@ -2,7 +2,7 @@ $(document).on("ready page:load", function() {
 
   if ($(".slideshow-container").length > 0) {
     $("body").css("overflow", "hidden"); // hide browser scroll bars
-    $("html *").css({"background-color": "black"});
+    $("html *, html").css({"background-color": "black"});
 
     images = $(".slideshow-container img"); // grab all slides
     images.hide(); // hide them all initially
