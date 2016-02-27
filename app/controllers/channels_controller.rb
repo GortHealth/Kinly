@@ -24,6 +24,7 @@ class ChannelsController < ApplicationController
   def edit
     @channel = Channel.find(params[:id])
     @photos = @channel.photos
+    @albums = Album.all
   end
 
   def show
