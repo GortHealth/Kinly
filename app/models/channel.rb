@@ -3,10 +3,19 @@ class Channel < ActiveRecord::Base
   belongs_to :target
 
   after_create :set_defaults
+  before_save :make_channel_inactive
 
   def set_defaults
     self.number ||= -1 # Channel.maximum('number') + 1 This needs to be set when channel is made active somewhere
     self.active ||= false
     self.save
   end
+
+  def make_channel_inactive
+    if self.active == false
+      self.number = -1
+    end
+
+  end
+
 end
