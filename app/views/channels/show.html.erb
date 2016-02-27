@@ -1,5 +1,7 @@
-<h1><%= @channel.name %></h1>
-
-<p>
-  This needs to be an AJAX call with the same view as target but also works for channnels that are not yet deployed. Chris it should be done the same way as you did your Pokemon display thing.
-</p>
+<%= javascript_include_tag 'application' %>
+<%= stylesheet_link_tag    'application' %>
+<div class="slideshow-container">
+  <% @channel.photos.each do |photo| %>
+    <%= image_tag photo.url %>
+  <% end %>
+</div>
