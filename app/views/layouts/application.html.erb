@@ -11,6 +11,12 @@
 
 <body>
 
+  <ul>
+    <li><%= link_to "My Channels", channels_path %></li>
+    <li><%= link_to "New Channel", new_channel_path %></li>
+    <li><%= link_to "Library", albums_path %></li>
+  </ul>
+
   <div id="nav">
     <% if current_user %>
       <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
