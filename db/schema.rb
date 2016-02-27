@@ -33,8 +33,9 @@ ActiveRecord::Schema.define(version: 20160227160853) do
   end
 
   create_table "channels_photos", id: false, force: :cascade do |t|
-    t.integer "channel_id", null: false
-    t.integer "photo_id",   null: false
+    t.integer "channel_id"
+    t.integer "photo_id"
+    t.integer "order"
   end
 
   create_table "photos", force: :cascade do |t|
