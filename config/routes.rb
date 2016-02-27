@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  root :to => 'users#index'
+  root 'channels#index'
+  
   resources :user_sessions
   resources :users
+
+  resources :targets, only: [:create, :new, :edit, :show, :update, :destroy]
+
+  resources :albums, only: [:index, :create, :show, :edit, :update, :destroy]
+
+  resources :photos
+  # Need edit in order to edit the name of photos, but do NOT allow user to edit URL (to prevent Bliss' trolling). Must delete to add new photo.
+
+  resources :channels
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
