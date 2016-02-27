@@ -1,0 +1,15 @@
+<h1>Edit "<%= @channel.name %>"</h1>
+
+<%= form_for @channel do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.radio_button :active, true %>
+  <%= f.label 'Deploy Channel' %>
+  <%= f.radio_button :active, false %>
+  <%= f.label 'Take Channel Offline' %>
+
+  <%= f.submit %>
+
+<% end %>
