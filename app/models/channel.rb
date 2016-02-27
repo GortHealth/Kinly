@@ -14,8 +14,16 @@ class Channel < ActiveRecord::Base
   def make_channel_inactive
     if self.active == false
       self.number = -1
+    elsif self.active == true && self.number == -1
+      max = Channel.maximum("number") + 1
+      counter = 1
+      max.times do
+        if Channel.select("number") != counter
+          self.number = counter
+          return
+        end
+        counter += 1
+      end
     end
-
   end
-
 end
