@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   root 'static_pages#welcome'
 
   get 'static_pages/welcome'
