@@ -8,7 +8,8 @@
     <li><%= channel.active %></li>
     <li><%= link_to "Edit Channel", edit_channel_path(channel) %></li>
     <li><%= link_to "Preview Channel", channel_path(channel) %></li>
-    <li><%= link_to "Change Active Status", "TBD - Probably Target Create and Destroy with helper method" %></li>
+    <!-- There could be another link here for change active status so it is obvious to user how to deplay channel (now it is in edit view) -->
+    <!-- This is a UX issue and should be discussed -->
   </ul>
 
 <% end %>
@@ -21,7 +22,8 @@
   <li><%= channel.active %></li>
   <li><%= link_to "Edit Channel", edit_channel_path(channel) %></li>
   <li><%= link_to "Preview Channel", channel_path(channel) %></li>
-  <li><%= link_to "Change Active Status", "TBD - Probably Target Create and Destroy with helper method" %></li>
+  <!-- There could be another link here for change active status so it is obvious to user how to deplay channel (now it is in edit view) -->
+  <!-- This is a UX issue and should be discussed -->
 </ul>
 
 <% end %>
