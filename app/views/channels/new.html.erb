@@ -1,0 +1,10 @@
+<h1>New Channel</h1>
+
+<%= form_for @channel do |f| %>
+
+  <%= f.label "Start with a channel name:" %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+
+<% end %>
