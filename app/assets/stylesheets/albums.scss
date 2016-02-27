@@ -1,3 +1,25 @@
 // Place all the styles related to the albums controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.album-photo-container {
+  width: 25%;
+  float: left;
+
+  a {
+    padding: 15px;
+    display: block;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  p {
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+  }
+}
