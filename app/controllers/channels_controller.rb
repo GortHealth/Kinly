@@ -3,7 +3,7 @@ class ChannelsController < ApplicationController
     @active_channels = Channel.where("active = ?", true).order(:number)
     @inactive_channels = Channel.where("active = ?", false).order(:created_at)
     @new_channel = Channel.new
-    @channels = @active_channels << @inactive_channels
+    @channels = @active_channels + @inactive_channels
   end
 
   def create
