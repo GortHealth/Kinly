@@ -1,0 +1,7 @@
+<div><%= link_to "Back to " + @photo.album.name, album_path(@photo.album) %></div>
+
+<%= image_tag @photo.url, alt: @photo.name %>
+
+<p>
+  <%= @photo.name %>
+</p>
