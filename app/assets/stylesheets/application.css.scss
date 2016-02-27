@@ -36,9 +36,46 @@
     margin: 20px;
   }
 
- .navbar-brand{
+  .navbar-default {
+    height: 52px;
+    background-color: #13938e;
+  }
+
+ .logo {
    height: 70px;
+   position: absolute;
+   top: 5;
+   left: 30;
  }
+
+.nav-links-container {
+  margin: 0 auto;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+
+  li {
+
+    float: left;
+    a {
+      color: white;
+      font-weight: lighter;
+      border: 1px solid white;
+      padding: 5px 15px;
+      font-size: 0.7rem;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: #13938e;
+        background-color: white;
+      }
+    }
+
+  }
+}
 
  a.navbar-brand {
    padding: 0px;
