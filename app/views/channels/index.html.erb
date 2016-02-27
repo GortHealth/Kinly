@@ -1,1 +1,36 @@
-<h1>Channel Listing</h1>
+<h1>Channels Listing</h1>
+
+<% @active_channels.each do |channel| %>
+
+  <ul>
+    <li><%= channel.number %></li>
+    <li><%= channel.name %></li>
+    <li><%= channel.active %></li>
+    <li><%= link_to "Edit Channel", edit_channel_path(channel) %></li>
+    <li><%= link_to "Preview Channel", channel_path(channel) %></li>
+    <li><%= link_to "Change Active Status", "TBD - Probably Target Create and Destroy with helper method" %></li>
+  </ul>
+
+<% end %>
+
+<% @inactive_channels.each do |channel| %>
+
+<ul>
+  <li><%= channel.number %></li>
+  <li><%= channel.name %></li>
+  <li><%= channel.active %></li>
+  <li><%= link_to "Edit Channel", edit_channel_path(channel) %></li>
+  <li><%= link_to "Preview Channel", channel_path(channel) %></li>
+  <li><%= link_to "Change Active Status", "TBD - Probably Target Create and Destroy with helper method" %></li>
+</ul>
+
+<% end %>
+
+<%= form_for @new_channel do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+
+<% end %>
