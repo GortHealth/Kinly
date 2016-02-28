@@ -22,14 +22,14 @@ Target.create(
 )
 
 channel_1 = Channel.create(
-  name: "Filip's Wedding",
+  name: "Frances' Family",
   number: 1,
   active: true,
   target_id: 1
 )
 
 channel_2 = Channel.create(
-  name: "Bliss' Intervention",
+  name: "Frances' Vacation",
   number: 2,
   active: true,
   target_id: 1
