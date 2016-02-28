@@ -15,7 +15,7 @@
 
 .target-channel-list {
   list-style-type: none;
-  width: 400px;
+  width: 550px;
   margin: 0 auto;
   padding: 30px;
   font-size: 1.3rem;
@@ -24,4 +24,14 @@
 
 .arrows {
   color: #9fdcd3;
+}
+
+.channel-number-indicator {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: #94d3c2;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: "Courier New", "Times New Roman";
 }

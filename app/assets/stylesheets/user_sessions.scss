@@ -23,3 +23,22 @@
     text-align: center;
   }
 }
+
+.login-heading {
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login-subtext {
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.login-sub-subtext { /* super descriptive class names ftw.. */
+  font-size: 1rem;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 45px;
+}
