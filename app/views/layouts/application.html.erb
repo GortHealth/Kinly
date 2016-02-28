@@ -48,7 +48,7 @@
     </nav>
   </header>
 
-  <% unless current_page?(about_path) %>
+  <% unless current_page?(about_path) || current_page?(root_path) %>
   <div class="container body-content">
     <div class="row">
       <div class="notifications">
@@ -59,7 +59,7 @@
 
   <%= yield %>
 
-  <% unless current_page?(about_path) %>
+  <% unless current_page?(about_path) || current_page?(root_path) %>
       </div>
     </div>
   <% end %>

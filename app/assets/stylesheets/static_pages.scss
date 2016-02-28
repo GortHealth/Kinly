@@ -11,14 +11,33 @@
 }
 .splash-overlay {
   position: absolute;
-  top: 35%;
-  left: 25%;
+  top: 40%;
+  left: calc(50% - 225px);
   font-size: 1.5rem;
   text-align: center;
 }
 
-.splash-text-upper {
+.splash-button {
+  text-transform: uppercase;
+  color: #8bb6a5;
+  border: 3px solid #8bb6a5;
+  padding: 14px 20px;
+  background-color: #2b2b2b;
+  opacity: 0.7;
+  display: inline-block;
+  margin: 50px auto 0;
+  font-size: 1.15rem;
 
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    border-color: white;
+  }
+}
+
+.splash-text-upper {
+  font-size: 3rem;
 }
 
 .splash-text-lower {
