@@ -43,6 +43,11 @@ channel_3 = Channel.create(
 )
 
 # 720 x 480 is one of the standard DVD resolutions
+# Channel 1
+
+p1c1 = Photo.create ( name: "Frances' family photos", url: 'FrancesLyfe/Family/A1_slides_family.jpg', thumbnail_url: 'FrancesLyfe/Family/A1_slides_family.jpg', album_id: 1, user_id: 1)
+
+
 photo_1 = Photo.create(
 name: "Filip",
 url: "http://fillmurray.com/720/480",
