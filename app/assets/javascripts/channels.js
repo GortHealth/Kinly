@@ -29,7 +29,7 @@ $(document).on("ready page:load", function() {
     function showSlide(i){
       var imageHeight;
 
-      $(images[i-1]).fadeOut(800);
+      $(images[i === 0 ? images.length-1 : i-1]).fadeOut(800);
 
       setTimeout(function() {
         $(images[i]).fadeIn(1000).css({"display": "block"});
