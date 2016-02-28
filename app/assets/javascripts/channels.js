@@ -54,5 +54,8 @@ $(document).on("ready page:load", function() {
 
   }
 
+  $(".new-channel-button").on('click', function() {
+    $("#new_channel").show(200);
+  })
 
 });
