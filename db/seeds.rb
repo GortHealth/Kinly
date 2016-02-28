@@ -8,7 +8,7 @@
 
 User.create(
   email: "cstaikos@gmail.com",
-  name: "Chris",
+  name: "Carlos",
   last_name: "Staikos",
   password: "chris4321",
   password_confirmation: "chris4321"
@@ -36,7 +36,7 @@ channel_2 = Channel.create(
 )
 
 channel_3 = Channel.create(
-  name: "Carlos' Nobel Peace Prize",
+  name: "Hacking Health Hamilton 2016",
   number: 3,
   active: true,
   target_id: 1
@@ -255,30 +255,30 @@ ChannelsPhoto.create(photo: p48c2, channel:channel_2, order: 48)
 # ChannelsPhoto.create(photo: photo_5, channel:channel_3, order: 5)
 # ChannelsPhoto.create(photo: photo_6, channel:channel_3, order: 6)
 # ChannelsPhoto.create(photo: photo_7, channel:channel_3, order: 7)
-
-Photo.create(
-name: "This is the only photo in Carlo's album.",
-url: "http://fillmurray.com/720/480",
-thumbnail_url: "http://fillmurray.com/150/100",
-album_id: 2,
-user_id: 1
-)
-
-Photo.create(
-name: "This is the only photo in Carlo's album.",
-url: "http://fillmurray.com/720/480",
-thumbnail_url: "http://fillmurray.com/150/100",
-album_id: 2,
-user_id: 1
-)
-
-Photo.create(
-name: "This is the only photo in Carlo's album.",
-url: "http://fillmurray.com/720/480",
-thumbnail_url: "http://fillmurray.com/150/100",
-album_id: 2,
-user_id: 1
-)
+#
+# Photo.create(
+# name: "This is the only photo in Carlo's album.",
+# url: "http://fillmurray.com/720/480",
+# thumbnail_url: "http://fillmurray.com/150/100",
+# album_id: 2,
+# user_id: 1
+# )
+#
+# Photo.create(
+# name: "This is the only photo in Carlo's album.",
+# url: "http://fillmurray.com/720/480",
+# thumbnail_url: "http://fillmurray.com/150/100",
+# album_id: 2,
+# user_id: 1
+# )
+#
+# Photo.create(
+# name: "This is the only photo in Carlo's album.",
+# url: "http://fillmurray.com/720/480",
+# thumbnail_url: "http://fillmurray.com/150/100",
+# album_id: 2,
+# user_id: 1
+# )
 
 Album.create(
 name: "unsorted",
@@ -286,7 +286,7 @@ user_id: 1
 )
 
 Album.create(
-name: "Carlos' Nobel Peace Prize",
+name: "Hacking Health Hamilton 2016",
 user_id: 1
 )
 
