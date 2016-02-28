@@ -36,8 +36,7 @@
               <li><%= link_to "Logout", :logout, method: :post %></li>
               <span class="welcome-text">Welcome, <%= current_user.name %></span>
               <% else %>
-              <!-- <li><%= link_to "Login", :login %></li> -->
-              <!-- <li><%= link_to "Register", new_user_path %></li> -->
+                <li><%= link_to "Login", :login %></li>
               <% end %>
             </ul>
           </div>

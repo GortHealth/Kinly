@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#welcome'
 
   resources :user_sessions
-  resources :users
+  resources :users, only: [:index, :show, :edit, :update, :destroy]
 
   resources :targets
 
