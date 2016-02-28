@@ -1,3 +1,27 @@
 // Place all the styles related to the targets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.target-list-header {
+  margin-top: 160px;
+  margin-bottom: 60px;
+}
+
+.target-instructions {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.target-channel-list {
+  list-style-type: none;
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+
+.arrows {
+  color: #9fdcd3;
+}
