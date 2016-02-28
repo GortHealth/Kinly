@@ -1,4 +1,8 @@
 class TargetsController < ApplicationController
+  def index
+    @channels = Target.channels.where("active = ?", true).order(:number)
+  end
+
   def create
     @target = Target.new(target_params)
 
