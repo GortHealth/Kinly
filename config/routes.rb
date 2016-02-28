@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   root 'channels#index'
-  
+
   resources :user_sessions
   resources :users
 
-  resources :targets, only: [:create, :new, :edit, :show, :update, :destroy]
+  resources :targets
 
   resources :albums, only: [:index, :create, :show, :edit, :update, :destroy]
 

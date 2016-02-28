@@ -1,6 +1,7 @@
 class TargetsController < ApplicationController
   def index
-    @channels = Target.channels.where("active = ?", true).order(:number)
+    # Grab the appropriate target instance and find channels
+    @channels = Target.first.channels.where("active = ?", true).order(:number)
   end
 
   def create
