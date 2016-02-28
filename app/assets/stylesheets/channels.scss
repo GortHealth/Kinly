@@ -8,6 +8,15 @@
 #new_channel {
   display: none;
 
+  label {
+    font-weight: lighter;
+  }
+
+  .btn-primary {
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
   input {
     width: 300px;
     margin-bottom: 15px;
