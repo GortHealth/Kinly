@@ -47,6 +47,8 @@ channel_3 = Channel.create(
 
 p1c1 = Photo.create ( name: "Frances' family photos", url: 'FrancesLyfe/Family/A1_slides_family.jpg', thumbnail_url: 'FrancesLyfe/Family/A1_slides_family.jpg', album_id: 1, user_id: 1)
 
+ChannelsPhoto.create(photo: p1c1, channel: channel_1, order: 1)
+
 
 photo_1 = Photo.create(
 name: "Filip",
@@ -104,7 +106,7 @@ album_id: 1,
 user_id: 1
 )
 
-ChannelsPhoto.create(photo: photo_1, channel:channel_1, order: 1)
+# ChannelsPhoto.create(photo: photo_1, channel:channel_1, order: 1)
 ChannelsPhoto.create(photo: photo_2, channel:channel_1, order: 2)
 ChannelsPhoto.create(photo: photo_3, channel:channel_1, order: 3)
 ChannelsPhoto.create(photo: photo_4, channel:channel_1, order: 4)
