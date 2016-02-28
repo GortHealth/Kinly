@@ -1,4 +1,6 @@
 class TargetsController < ApplicationController
+  skip_before_action :require_login
+
   def index
     # Grab the appropriate target instance and find channels
     @target = Target.first

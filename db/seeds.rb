@@ -8,10 +8,10 @@
 
 User.create(
   email: "cstaikos@gmail.com",
-  name: "Chriss",
+  name: "Chris",
   last_name: "Staikos",
-  password: "chriss4321",
-  password_confirmation: "chriss4321"
+  password: "chris4321",
+  password_confirmation: "chris4321"
 )
 
 Target.create(
