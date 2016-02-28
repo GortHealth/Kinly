@@ -96,6 +96,13 @@
   ul {
     list-style-type: none;
 
+    .welcome-text {
+      font-size: 0.75rem;
+      display: block;
+      margin-top: 15px;
+      float: right;
+    }
+
     li {
       margin-left: 15px;
       float: right;
