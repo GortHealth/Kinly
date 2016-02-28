@@ -26,7 +26,8 @@ class TargetsController < ApplicationController
   end
 
   def show
-    @target = Target.find(params[:id])
+    @target = Target.first.channels.find(params[:id])
+    render :layout => false
   end
 
   def update
