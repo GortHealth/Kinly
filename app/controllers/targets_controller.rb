@@ -1,4 +1,11 @@
 class TargetsController < ApplicationController
+  def index
+    # Grab the appropriate target instance and find channels
+    @target = Target.first
+    @channels = Target.first.channels.where("active = ?", true).order(:number)
+    render :layout => false
+  end
+
   def create
     @target = Target.new(target_params)
 
@@ -19,7 +26,8 @@ class TargetsController < ApplicationController
   end
 
   def show
-    @target = Target.find(params[:id])
+    @target = Target.first.channels.find(params[:id])
+    render :layout => false
   end
 
   def update

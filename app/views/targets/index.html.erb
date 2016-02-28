@@ -1,0 +1,8 @@
+<h1>Welcome back, <%= @target.name + " " + @target.last_name %></h1>
+
+<% @channels.each do |channel| %>
+<p>
+<%= channel.number.to_s + ". " + channel.name %>
+</p>
+
+<% end %>
