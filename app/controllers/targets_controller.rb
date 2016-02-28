@@ -28,8 +28,12 @@ class TargetsController < ApplicationController
   end
 
   def show
-    @target = Target.first.channels.find(params[:id])
-    render :layout => false
+    if Target.first.channels.where(id: params[:id]).empty?
+      redirect_to target_path(params[:id] == "0" ? Target.first.channels.last.id : 1)
+    else
+      @target = Target.first.channels.find(params[:id])
+      render :layout => false
+    end
   end
 
   def update
