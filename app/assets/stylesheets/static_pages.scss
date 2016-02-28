@@ -11,7 +11,7 @@
 }
 .splash-overlay {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: calc(50% - 225px);
   font-size: 1.5rem;
   text-align: center;
@@ -19,13 +19,13 @@
 
 .splash-button {
   text-transform: uppercase;
-  color: #8bb6a5;
-  border: 3px solid #8bb6a5;
+  color: #94d3c2;
+  border: 3px solid #94d3c2;
   padding: 14px 20px;
   background-color: #2b2b2b;
   opacity: 0.7;
   display: inline-block;
-  margin: 80px auto 0;
+  margin: 40px auto 0;
   font-size: 1.0rem;
 
 
@@ -42,6 +42,8 @@
 
 .splash-text-lower {
   font-style: italic;
+  display: block;
+  margin-top: 20px;
 }
 
 .welcome-bottom {
@@ -49,15 +51,16 @@
   width: 100%;
 
   h3 {
+    font-size: 1.6rem;
     text-align: center;
     text-transform: uppercase;
-    color: #b7eae0;
-    margin-bottom: 30px;
-    margin-top: 60px;
+    color: #b8e1db;
+    margin-bottom: 50px;
+    margin-top: 80px;
   }
 
   h4 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.3rem;
     margin-bottom: 15px;
   }
