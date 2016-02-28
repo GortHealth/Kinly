@@ -11,7 +11,7 @@ User.create(
   name: "Chris",
   last_name: "Staikos",
   password: "chris4321",
-  password_confirmation: "chriss4321"
+  password_confirmation: "chris4321"
 )
 
 Target.create(
