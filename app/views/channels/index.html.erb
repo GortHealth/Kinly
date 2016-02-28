@@ -1,13 +1,21 @@
-<h1>Channels</h1>
+<div class="channels-top-section">
 
-<%= form_for @new_channel do |f| %>
+  <h1 class="channels-header">Channels</h1>
+  <h2 class="channels-subheading">What's on TV?</h2>
+
+  <a href="#" class="new-channel-button">New Channel</a>
+
+  <%= form_for @new_channel do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <%= f.submit %>
+  <%= f.submit "Create Channel", class: "btn-primary" %>
 
-<% end %>
+  <% end %>
+
+</div>
+
 
 <div class="col-xs-12 channels-container">
   <% @channels.each do |channel| %>
