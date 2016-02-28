@@ -1,5 +1,9 @@
 $(document).on("ready page:load", function() {
 
+  window.setTimeout(function(){
+    $(".channel-number-indicator").hide();
+  }, 3000)
+
   if ($(".slideshow-container").length > 0) {
     $("body").css("overflow", "hidden"); // hide browser scroll bars
     $("html *, html").css({"background-color": "black"});
