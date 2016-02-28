@@ -1,3 +1,52 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.splash-photo {
+  width: 100%;
+}
+
+.splash-outer {
+  position: relative;
+}
+.splash-overlay {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.splash-text-upper {
+
+}
+
+.splash-text-lower {
+  font-style: italic;
+}
+
+.welcome-bottom {
+  background-color: #2b2b2b;
+  width: 100%;
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #b7eae0;
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  span {
+    position: absolute;
+  }
+}

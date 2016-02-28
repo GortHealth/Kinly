@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'channels#index'
-  
+
   resources :user_sessions
   resources :users
 
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :channels
 
+  get 'about' => 'static_pages#welcome', :as => :about
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
