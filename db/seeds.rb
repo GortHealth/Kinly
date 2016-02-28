@@ -7,11 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(
-  email: "blissman@gmail.com",
-  name: "Bliss",
-  last_name: "Man",
-  password: "bliss",
-  password_confirmation: "bliss"
+  email: "cstaikos@gmail.com",
+  name: "Chriss",
+  last_name: "Staikos",
+  password: "chriss4321",
+  password_confirmation: "chriss4321"
 )
 
 Target.create(
@@ -38,7 +38,7 @@ channel_2 = Channel.create(
 channel_3 = Channel.create(
   name: "Carlos' Nobel Peace Prize",
   number: 3,
-  active: false,
+  active: true,
   target_id: 1
 )
 
