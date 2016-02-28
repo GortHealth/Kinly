@@ -18,7 +18,7 @@
       <div class="container">
         <div class="header-inner">
 
-          <a class="logo" href="/"><%= image_tag '/assets/logo_name_kinly.png' %></a>
+          <a class="logo" href="/"><%= image_tag 'logo_name_kinly.png' %></a>
 
           <div class="nav-links-container">
             <ul class="nav-links">
@@ -56,7 +56,7 @@
         <p id="alert"><%= flash[:alert] %></p>
       </div>
   <% end %>
-  
+
   <%= yield %>
 
   <% unless current_page?(about_path) %>
