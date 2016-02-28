@@ -2,9 +2,14 @@ This is project created at the Hacking Health Hamilton event. It was pitched on 
 
 Team Members:
 
-Ariel Zohar - Healthcare Professional / Research / Business
+Ariel Zohar - Healthcare Professional / Research
+
 Bliss Man - Back End Developer / Raspberry Pi setup
-Carlos Lozano - Web Developer / Business
+
+Carlos Lozano - Web Developer / Business Lead
+
 Chris Staikos - Lead Front End Developer
+
 Filip Stankovic - Back End Developer / Business
+
 Frances Conley-Wood - Front End Developer / Designer
