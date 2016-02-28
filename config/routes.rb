@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'channels#index'
+  root 'static_pages#welcome'
 
   resources :user_sessions
   resources :users
