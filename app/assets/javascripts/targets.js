@@ -6,8 +6,19 @@ $(document).on('keypress', function(e) {
   currentChannel = href.substr(href.lastIndexOf('/') + 1);
   if (e.which === 117) { // 'u' for up
     newChannel = parseInt(currentChannel) + 1;
+    if (currentChannel === "targets") {
+      $(".target-channels-list li:first-child").css({
+        "color": "black"
+      });
+      window.setTimeout(function(){
+        window.location.href = baseUrl + "/targets/1";
+      }, 500);
+
+      return;
+    }
   }
   else { //'d' for down
+    if (currentChannel === "targets") return;
     newChannel = parseInt(currentChannel) - 1;
   }
 

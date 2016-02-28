@@ -1,8 +1,15 @@
-<h1>Welcome back, <%= @target.name + " " + @target.last_name %></h1>
+<%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %>
 
-<% @channels.each do |channel| %>
-<p>
-<%= channel.number.to_s + ". " + channel.name %>
-</p>
+<h1 class="target-list-header">Welcome back, <%= @target.name + " " + @target.last_name %></h1>
+<h2 class="target-instructions">Please use your remote control to select a channel or browse channels using <span class="glyphicon glyphicon-arrow-up arrows"></span> or <span class="glyphicon glyphicon-arrow-down arrows"></span></h2>
 
-<% end %>
+<ul class="target-channel-list">
+  <% @channels.each do |channel| %>
+  <li>
+    <%= channel.number.to_s %>.&nbsp;&nbsp;&nbsp;&nbsp;<%= channel.name %>
+  </li>
+  <% end %>
+</ul>
