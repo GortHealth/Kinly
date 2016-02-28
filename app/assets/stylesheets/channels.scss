@@ -5,40 +5,121 @@
   background: black;
 }
 
-.channel-container {
+.channel-tile.inactive {
 
-  .channel-info {
-    padding-top: 5px;
-
-    h4 {
-      padding: 0 10px;
-    }
-
-    .btn-group {
-      margin-top: 10px;
-    }
-  }
+  background-color: #b7eae0;
+  border: 2px solid #9fdcd3;
 
   .channel-number {
-    font-size: 30px;
-    font-weight: bold;
-    // border: 2px solid #94d3c2;
+    span {
+      color: #9fdcd3;
+      background-color: #9fdcd3;
+    }
+  }
+
+  .photo-reel,
+  .photo-reel * {
+    opacity: 0.7;
+  }
+
+  .channel-info {
+    h1 {
+      color: #6e8c86;
+    }
+  }
+
+  .channel-buttons ul li a {
+    background-color: #9fdcd3;
+  }
+
+}
+
+.channels-container {
+  background-color: #b7eae0;
+  width: 100%;
+}
+
+.channel-tile {
+  background-color: white;
+  margin: 30px;
+  overflow: hidden;
+}
+
+.channel-number {
+  width: 100px;
+  height: 100px;
+  color: black;
+  float: left;
+
+  span {
     border-radius: 50%;
-    width: 1.5em;
+    background-color: #b7eae0;
+    padding: 5px 15px;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    display: inline-block;
     text-align: center;
-    margin: 8px;
-    background: #94d3c2;
+  }
+}
+
+.channel-info {
+  overflow: hidden;
+  padding: 10px;
+  float: left;
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 10px 0;
   }
 
-  &.inactive  {
-    .channel-info {
-      color: gray;
-    }
+  width: 85%;
+  color: black;
+}
 
-    .channel-number {
-      background: #8a8c8c;
-    }
+.photo-reel {
+  overflow: hidden;
+  float: left;
+  border-left: 10px solid #2b2b2b;
+  border-right: 10px solid #2b2b2b;
 
+  img {
+    float: left;
+    display: block;
+    border: 2px solid #2b2b2b;
+    width: 70px;
+
+    // &:first-child {
+    //   border-left-width: 10px;
+    // }
+    //
+    // &:last-child {
+    //   border-right-width: 10px;
+    // }
+  }
+}
+
+.channel-buttons {
+  overflow: hidden;
+  float: right;
+  ul {
+    list-style-type: none;
   }
 
+  li {
+    float: left;
+
+    a {
+      background-color: #1f938d;
+      padding: 7px 15px;
+      color: white;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }

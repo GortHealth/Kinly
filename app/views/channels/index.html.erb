@@ -1,23 +1,4 @@
-<h1>My Channels</h1>
-
-<% @channels.each do |channel| %>
-  <div class="col-xs-12 channel-container <%= "inactive" if !channel.active %>">
-
-    <span class="pull-left channel-number"><%= channel.number %></span>
-    <div class="channel-info">
-      <h4 class="pull-left"><%= channel.name %></h4>
-
-      <div class="pull-right">
-        <a href="#" class="btn btn-primary">Add Photo</a>
-        <%= link_to "Preview", channel_path(channel), class: "btn btn-primary" %>
-        <%= link_to "Edit", edit_channel_path(channel), class: "btn btn-primary" %>
-      </div>
-    </div>
-  
-  </div>
-
-<% end %>
-
+<h1>Channels</h1>
 
 <%= form_for @new_channel do |f| %>
 
@@ -27,3 +8,34 @@
   <%= f.submit %>
 
 <% end %>
+
+<div class="col-xs-12 channels-container">
+  <% @channels.each do |channel| %>
+  <div class="channel-tile <%= "inactive" if !channel.active %>">
+
+    <div class="channel-number">
+      <span>
+        <%= channel.number %>
+      </span>
+    </div>
+    <div class="channel-info">
+      <h1><%= channel.name %></h1>
+      <div class="photo-reel">
+        <% channel.photos.sample(6).each do |photo| %>
+          <%= image_tag photo.thumbnail_url %>
+        <% end %>
+      </div>
+      <div class="channel-buttons">
+        <ul>
+          <li><%= link_to "Add Photo" %></li>
+          <li><%= link_to "Preview", channel %></li>
+          <li><%= link_to "Edit", edit_channel_path(channel) %></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <% end %>
+
+</div>
