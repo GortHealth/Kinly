@@ -1,29 +1,49 @@
-<h1>My Channels</h1>
+<div class="channels-top-section">
 
-<% @channels.each do |channel| %>
-  <div class="col-xs-12 channel-container <%= "inactive" if !channel.active %>">
+  <h1 class="channels-header">Channels</h1>
+  <h2 class="channels-subheading">What's on TV?</h2>
 
-    <span class="pull-left channel-number"><%= channel.number %></span>
-    <div class="channel-info">
-      <h4 class="pull-left"><%= channel.name %></h4>
+  <a href="#" class="new-channel-button">New Channel</a>
 
-      <div class="pull-right">
-        <a href="#" class="btn btn-primary">Add Photo</a>
-        <%= link_to "Preview", channel_path(channel), class: "btn btn-primary" %>
-        <%= link_to "Edit", edit_channel_path(channel), class: "btn btn-primary" %>
-      </div>
-    </div>
-  
-  </div>
-
-<% end %>
-
-
-<%= form_for @new_channel do |f| %>
+  <%= form_for @new_channel do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <%= f.submit %>
+  <%= f.submit "Create Channel", class: "btn-primary" %>
 
-<% end %>
+  <% end %>
+
+</div>
+
+
+<div class="col-xs-12 channels-container">
+  <% @channels.each do |channel| %>
+  <div class="channel-tile <%= "inactive" if !channel.active %>">
+
+    <div class="channel-number">
+      <span>
+        <%= channel.number %>
+      </span>
+    </div>
+    <div class="channel-info">
+      <h1><%= channel.name %></h1>
+      <div class="photo-reel">
+        <% channel.photos.sample(6).each do |photo| %>
+          <%= image_tag photo.thumbnail_url %>
+        <% end %>
+      </div>
+      <div class="channel-buttons">
+        <ul>
+          <li><%= link_to "Add Photo" %></li>
+          <li><%= link_to "Preview", channel %></li>
+          <li><%= link_to "Edit", edit_channel_path(channel) %></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <% end %>
+
+</div>
