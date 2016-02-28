@@ -8,7 +8,7 @@
 
 User.create(
   email: "cstaikos@gmail.com",
-  name: "Chris",
+  name: "Carlos",
   last_name: "Staikos",
   password: "chris4321",
   password_confirmation: "chris4321"
@@ -36,7 +36,7 @@ channel_2 = Channel.create(
 )
 
 channel_3 = Channel.create(
-  name: "Carlos' Nobel Peace Prize",
+  name: "Hacking Health Hamilton 2016",
   number: 3,
   active: true,
   target_id: 1
@@ -255,30 +255,30 @@ ChannelsPhoto.create(photo: p48c2, channel:channel_2, order: 48)
 # ChannelsPhoto.create(photo: photo_5, channel:channel_3, order: 5)
 # ChannelsPhoto.create(photo: photo_6, channel:channel_3, order: 6)
 # ChannelsPhoto.create(photo: photo_7, channel:channel_3, order: 7)
-
-Photo.create(
-name: "This is the only photo in Carlo's album.",
-url: "http://fillmurray.com/720/480",
-thumbnail_url: "http://fillmurray.com/150/100",
-album_id: 2,
-user_id: 1
-)
-
-Photo.create(
-name: "This is the only photo in Carlo's album.",
-url: "http://fillmurray.com/720/480",
-thumbnail_url: "http://fillmurray.com/150/100",
-album_id: 2,
-user_id: 1
-)
-
-Photo.create(
-name: "This is the only photo in Carlo's album.",
-url: "http://fillmurray.com/720/480",
-thumbnail_url: "http://fillmurray.com/150/100",
-album_id: 2,
-user_id: 1
-)
+#
+# Photo.create(
+# name: "This is the only photo in Carlo's album.",
+# url: "http://fillmurray.com/720/480",
+# thumbnail_url: "http://fillmurray.com/150/100",
+# album_id: 2,
+# user_id: 1
+# )
+#
+# Photo.create(
+# name: "This is the only photo in Carlo's album.",
+# url: "http://fillmurray.com/720/480",
+# thumbnail_url: "http://fillmurray.com/150/100",
+# album_id: 2,
+# user_id: 1
+# )
+#
+# Photo.create(
+# name: "This is the only photo in Carlo's album.",
+# url: "http://fillmurray.com/720/480",
+# thumbnail_url: "http://fillmurray.com/150/100",
+# album_id: 2,
+# user_id: 1
+# )
 
 Album.create(
 name: "unsorted",
@@ -286,10 +286,11 @@ user_id: 1
 )
 
 Album.create(
-name: "Carlos' Nobel Peace Prize",
+name: "Hacking Health Hamilton 2016",
 user_id: 1
 )
 
+h1c0 = Photo.create( name: "Hacking Health Hamilton 2016", url: 'HHH/A.jpg', thumbnail_url: 'HHH_thumbnails/A.jpg', album_id: 3, user_id: 1)
 h1c1 = Photo.create( name: "Hacking Health Hamilton 2016", url: 'HHH/DSC_0453.jpg', thumbnail_url: 'HHH_thumbnails/DSC_0453.jpg', album_id: 3, user_id: 1)
 h2c1 = Photo.create( name: "Hacking Health Hamilton 2016", url: 'HHH/DSC_0456.jpg', thumbnail_url: 'HHH_thumbnails/DSC_0456.jpg', album_id: 3, user_id: 1)
 h3c1 = Photo.create( name: "Hacking Health Hamilton 2016", url: 'HHH/DSC_0457.jpg', thumbnail_url: 'HHH_thumbnails/DSC_0457.jpg', album_id: 3, user_id: 1)
@@ -301,13 +302,14 @@ h8c1 = Photo.create( name: "Hacking Health Hamilton 2016", url: 'HHH/DSC_0518.jp
 h9c1 = Photo.create( name: "Hacking Health Hamilton 2016", url: 'HHH/DSC_0520.jpg', thumbnail_url: 'HHH_thumbnails/DSC_0520.jpg', album_id: 3, user_id: 1)
 h10c1 = Photo.create( name: "Hacking Health Hamilton 2016", url: 'HHH/DSC_0521.jpg', thumbnail_url: 'HHH_thumbnails/DSC_0521.jpg', album_id: 3, user_id: 1)
 
-ChannelsPhoto.create(photo: h1c1, channel: channel_3, order: 1)
-ChannelsPhoto.create(photo: h2c1, channel: channel_3, order: 2)
-ChannelsPhoto.create(photo: h3c1, channel: channel_3, order: 3)
-ChannelsPhoto.create(photo: h4c1, channel: channel_3, order: 4)
-ChannelsPhoto.create(photo: h5c1, channel: channel_3, order: 5)
-ChannelsPhoto.create(photo: h6c1, channel: channel_3, order: 6)
-ChannelsPhoto.create(photo: h7c1, channel: channel_3, order: 7)
-ChannelsPhoto.create(photo: h8c1, channel: channel_3, order: 8)
-ChannelsPhoto.create(photo: h9c1, channel: channel_3, order: 9)
-ChannelsPhoto.create(photo: h10c1, channel: channel_3, order: 10)
+ChannelsPhoto.create(photo: h1c0, channel: channel_3, order: 1)
+ChannelsPhoto.create(photo: h1c1, channel: channel_3, order: 2)
+ChannelsPhoto.create(photo: h2c1, channel: channel_3, order: 3)
+ChannelsPhoto.create(photo: h3c1, channel: channel_3, order: 4)
+ChannelsPhoto.create(photo: h4c1, channel: channel_3, order: 5)
+ChannelsPhoto.create(photo: h5c1, channel: channel_3, order: 6)
+ChannelsPhoto.create(photo: h6c1, channel: channel_3, order: 7)
+ChannelsPhoto.create(photo: h7c1, channel: channel_3, order: 8)
+ChannelsPhoto.create(photo: h8c1, channel: channel_3, order: 9)
+ChannelsPhoto.create(photo: h9c1, channel: channel_3, order: 10)
+ChannelsPhoto.create(photo: h10c1, channel: channel_3, order: 11)
