@@ -25,3 +25,6 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# DS_Store from Mac
+.DS_Store
