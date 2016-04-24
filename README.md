@@ -1,4 +1,7 @@
-This is project created at the Hacking Health Hamilton event. It was pitched on Friday, February 26th to the Hacking Health community. We executed it over an intense 12 hour period on Saturday, February 27th.
+# Kinly
+### *Your family on channel 3*
+
+Kinly is an IoT based web application designed to promote family interaction and reduce the negative impact of social isolation among seniors. The project was created at Hacking Health Hamilton 2016, over an intense 36-hour period. Kinly was the recipient of the top prize "Cossette Health Award" as well as the Hacking Health Hamilton "Best Business Award".
 
 Team Members:
 
