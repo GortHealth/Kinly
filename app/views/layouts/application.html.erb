@@ -1,101 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
 
-  <title>KINLY</title>
+    <title>KINLY</title>
 
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %>
+    <%= csrf_meta_tags %>
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <header class="header-main">
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="header-inner">
+    <header class="header-main">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="header-inner">
 
-          <a class="logo" href="/"><%= image_tag 'logo_name_kinly.png' %></a>
+            <a class="logo" href="/"><%= image_tag 'logo_name_kinly.png' %></a>
 
-          <div class="nav-links-container hidden-xs">
-            <ul class="nav-links">
-              <% if current_user %>
-              <li><%=link_to "Channels", channels_path %></li>
-              <li><%=link_to "Library", albums_path %></li>
-              <li><%=link_to "Account", user_path(current_user) %></li>
-              <% end %>
-            </ul>
-          </div><!-- nav-links-container -->
+            <div class="nav-links-container hidden-xs">
+              <ul class="nav-links">
+                <% if current_user %>
+                <li><%=link_to "Channels", channels_path %></li>
+                <li><%=link_to "Library", albums_path %></li>
+                <li><%=link_to "Account", user_path(current_user) %></li>
+                <% end %>
+              </ul>
+            </div><!-- nav-links-container -->
 
-          <div class="login-container">
-            <ul>
-              <% if current_user %>
-              <li><%= link_to "Logout", :logout, method: :post %></li>
-              <span class="welcome-text">Welcome, <%= current_user.name %></span>
-              <% else %>
-                <li><%= link_to "Login", :login %></li>
-              <% end %>
-            </ul>
+            <div class="login-container">
+              <ul>
+                <% if current_user %>
+                <li><%= link_to "Logout", :logout, method: :post %></li>
+                <span class="welcome-text">Welcome, <%= current_user.name %></span>
+                <% else %>
+                  <li><%= link_to "Login", :login %></li>
+                <% end %>
+              </ul>
+            </div>
+
           </div>
 
-        </div>
 
-
-    </div>
-    </nav>
-  </header>
-
-  <% unless current_page?(about_path) || current_page?(root_path) %>
-  <div class="container body-content">
-    <div class="row">
-  <% end %>
-
-  <%= yield %>
-
-  <% unless current_page?(about_path) || current_page?(root_path) %>
       </div>
-    </div>
-  <% end %>
+      </nav>
+    </header>
 
-<!-- <div class="container footer-main"> -->
-  <footer class="footer-main">
-    <div class="social-container">
-      <a href="#"></a>
-      <a href="#"></a>
-      <a href="#"></a>
-    </div>
+    <% unless current_page?(about_path) || current_page?(root_path) %>
+    <div class="container body-content">
+      <div class="row">
+    <% end %>
 
-    <div class="container">
-      <!-- <div class="contact-info">
-        Contact: <br>
-        <ul>
-          <li>Phone: 555-555-5555</li>
-          <li>Email: <a href="mailto:support@getkinly.com">support@getkinly.com</a></li>
-          <li>123 Fake Street</li>
-          <li>Suite 203</li>
-          <li>Toronto, ON</li>
-          <li>M6J 2K5</li>
-        </ul>
-      </div> -->
-    </div>
-  </footer>
-<!-- </div> -->
+    <%= yield %>
 
-</body>
+    <% unless current_page?(about_path) || current_page?(root_path) %>
+        </div>
+      </div>
+    <% end %>
+
+  <!-- <div class="container footer-main"> -->
+    <footer class="footer-main">
+      <div class="social-container">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
+
+      <div class="container">
+        <!-- <div class="contact-info">
+          Contact: <br>
+          <ul>
+            <li>Phone: 555-555-5555</li>
+            <li>Email: <a href="mailto:support@getkinly.com">support@getkinly.com</a></li>
+            <li>123 Fake Street</li>
+            <li>Suite 203</li>
+            <li>Toronto, ON</li>
+            <li>M6J 2K5</li>
+          </ul>
+        </div> -->
+      </div>
+    </footer>
+  <!-- </div> -->
+
+  </body>
 </html>
